@@ -1,0 +1,29 @@
+{
+  "format": "unipackage-unibuild-pre1",
+  "packageVariables": [
+    {
+      "name": "xhr"
+    },
+    {
+      "name": "loading"
+    },
+    {
+      "name": "initializeModules"
+    }
+  ],
+  "uses": [
+    {
+      "package": "meteor"
+    }
+  ],
+  "resources": [
+    {
+      "type": "prelink",
+      "file": "web.browser/packages/pfafman:polymer.js",
+      "length": 812150,
+      "offset": 0,
+      "servePath": "/packages/pfafman:polymer.js",
+      "sourceMap": "web.browser/packages/pfafman:polymer.js.map"
+    }
+  ]
+}

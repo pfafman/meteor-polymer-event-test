@@ -1,0 +1,19 @@
+{
+  "format": "unipackage-unibuild-pre1",
+  "packageVariables": [],
+  "uses": [
+    {
+      "package": "meteor"
+    }
+  ],
+  "resources": [
+    {
+      "type": "prelink",
+      "file": "os/packages/pfafman:polymer.js",
+      "length": 0,
+      "offset": 0,
+      "servePath": "/packages/pfafman:polymer.js",
+      "sourceMap": "os/packages/pfafman:polymer.js.map"
+    }
+  ]
+}

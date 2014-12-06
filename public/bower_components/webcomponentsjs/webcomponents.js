@@ -1310,6 +1310,7 @@ if (WebComponents.flags.shadow) {
         }
         listeners.push(listener);
         var target = getTargetToListenAt(this);
+        
         target.addEventListener_(type, dispatchOriginalEvent, true);
       },
       removeEventListener: function(type, fun, capture) {

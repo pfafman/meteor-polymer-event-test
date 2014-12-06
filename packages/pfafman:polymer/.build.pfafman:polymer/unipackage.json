@@ -1,0 +1,23 @@
+{
+  "name": "pfafman:polymer",
+  "summary": "Add Polymer to meteor Project",
+  "version": "0.0.1+34e4e4487d9b61444db2d7246cd1dae666e71147",
+  "earliestCompatibleVersion": "0.0.0",
+  "isTest": false,
+  "plugins": [],
+  "unibuilds": [
+    {
+      "arch": "os",
+      "path": "os.json"
+    },
+    {
+      "arch": "web.browser",
+      "path": "web.browser.json"
+    },
+    {
+      "arch": "web.cordova",
+      "path": "web.cordova.json"
+    }
+  ],
+  "format": "unipackage-pre2"
+}
