@@ -9,11 +9,14 @@ Once you include webcomponents.js in the header, events that are set in a meteor
 
 Events set up via jQuery will still fire.
 
-### Branches
+Example Site: http://polymer-event-test.meteor.com
 
+### Branches
 
 * Header insert (main)
 
 * Compatibility
 
 * Package - TODO
+
+
