@@ -22,3 +22,4 @@ Template.hello.events
     console.log("template click event")
     Session.set("templateEventCounter", Session.get("templateEventCounter") + 1)
   
+

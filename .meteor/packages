@@ -7,5 +7,4 @@ meteor-platform
 autopublish
 insecure
 coffeescript
-pfafman:polymer
-
+meteorhacks:inject-initial
