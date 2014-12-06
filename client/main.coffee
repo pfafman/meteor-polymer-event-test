@@ -18,8 +18,11 @@ Template.hello.helpers
 
 Template.hello.events
   # Will not fire if webcomponents.js is loaded
-  'click button': ->
+  'click button': (e, tmpl) ->
     console.log("template click event")
     Session.set("templateEventCounter", Session.get("templateEventCounter") + 1)
   
+
+  'click .container': (e, tmpl) ->
+    console.log("template click event on container")
 

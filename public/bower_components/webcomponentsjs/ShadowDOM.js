@@ -44,6 +44,7 @@ if (typeof WeakMap === "undefined") {
   })();
 }
 
+
 window.ShadowDOMPolyfill = {};
 
 (function(scope) {
@@ -912,6 +913,7 @@ window.ShadowDOMPolyfill = {};
   function dispatchOriginalEvent(originalEvent) {
     if (handledEventsTable.get(originalEvent)) return;
     handledEventsTable.set(originalEvent, true);
+    console.log("dispatchEvent", originalEvent, originalEvent.target)
     dispatchEvent(wrap(originalEvent), wrap(originalEvent.target));
     if (pendingError) {
       var err = pendingError;
@@ -2815,6 +2817,7 @@ window.ShadowDOMPolyfill = {};
   }
   var OriginalHTMLTemplateElement = window.HTMLTemplateElement;
   function HTMLTemplateElement(node) {
+    console.log("Template", OriginalHTMLTemplateElement)
     HTMLElement.call(this, node);
     if (!OriginalHTMLTemplateElement) {
       var content = extractContent(node);
@@ -3071,6 +3074,7 @@ window.ShadowDOMPolyfill = {};
       return new HTMLShadowElement(node);
 
      case "template":
+      console.log("HTMLUnknownElement template", node)
       return new HTMLTemplateElement(node);
     }
     HTMLElement.call(this, node);
@@ -4057,6 +4061,7 @@ window.ShadowDOMPolyfill = {};
   scope.wrappers.Document = Document;
 })(window.ShadowDOMPolyfill);
 
+
 (function(scope) {
   "use strict";
   var EventTarget = scope.wrappers.EventTarget;
@@ -4131,6 +4136,7 @@ window.ShadowDOMPolyfill = {};
   }
 })(window.ShadowDOMPolyfill);
 
+
 (function(scope) {
   "use strict";
   var registerWrapper = scope.registerWrapper;
@@ -4160,7 +4166,9 @@ window.ShadowDOMPolyfill = {};
   };
 })(window.ShadowDOMPolyfill);
 
+
 (function(scope) {
+  
   "use strict";
   var isWrapperFor = scope.isWrapperFor;
   var elements = {
@@ -4233,6 +4241,7 @@ window.ShadowDOMPolyfill = {};
     ul: "HTMLUListElement",
     video: "HTMLVideoElement"
   };
+
   function overrideConstructor(tagName) {
     var nativeConstructorName = elements[tagName];
     var nativeConstructor = window[nativeConstructorName];
@@ -4242,7 +4251,11 @@ window.ShadowDOMPolyfill = {};
     window[nativeConstructorName] = wrapperConstructor;
   }
   Object.keys(elements).forEach(overrideConstructor);
+  
   Object.getOwnPropertyNames(scope.wrappers).forEach(function(name) {
     window[name] = scope.wrappers[name];
   });
+  
 })(window.ShadowDOMPolyfill);
+
+
