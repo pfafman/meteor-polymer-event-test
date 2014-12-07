@@ -7,4 +7,7 @@ meteor-platform
 autopublish
 insecure
 coffeescript
+iron:router
+raix:famono
+gadicohen:famous-views
 
