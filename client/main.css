@@ -2,7 +2,8 @@
 html,body {
   height: 100%;
   margin: 0;
-  background-color: #F5F5F5;
+  background-color: #777;
+  color: white;
   font-family: 'RobotoDraft', sans-serif;
 }
 
@@ -53,4 +54,16 @@ core-toolbar {
 paper-toast {
   bottom: 40px;
   left: 10px;
+}
+
+#my-button {
+  background-color: blue;
+}
+
+#my-button #ripple {
+  color: #777;
+}
+
+#my-button::shadow #ripple {
+  color: #666;
 }

@@ -1,6 +1,8 @@
 
 <template name="layout">
-  {{#famousContext id="mainCtx"}}  
-    {{> yield}}
+  {{#famousContext id="mainCtx"}}
+    <core-scaffold> 
+      {{> yield}}
+    </core-scaffold>
   {{/famousContext}}
 </template>
