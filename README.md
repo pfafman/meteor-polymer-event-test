@@ -5,13 +5,38 @@ Testing to see how to get meteor template events to work
 
 ### Background
 
-Once you include webcomponents.js in the header, events that are set in a meteor template stop firing in Safari and Firefox.  Chrome still works.
+I was finding that in a basic Meteor app with a template include that 
+once you include webcomponents.js in the header, events that are set in a meteor template stop firing in Safari and Firefox.  Chrome still works.
 
-The only branch that seems to work is the Famous wrapped one but seems nuts to add all that to just get polymer to stop dumping the meteor template events.
+So if you do this
+```
+<body>
+  {{> hello}}
+</body>
+```
+and this 
+```
+Template.hello.events
+  # Will not fire if webcomponents.js is loaded
+  'click button': ->
+    console.log("template click event")
+```
+The template events will not fire in non chrome browsers!  Events set up via jQuery will still fire.
 
-Events set up via jQuery will still fire.
+But if you change the template to this so the included template is in some block.
+```
+<body>
+  <div>
+    {{> hello}}
+  </div>
+</body>
+
+```
+then they work.
+
 
 Example Site: http://polymer-event-test.meteor.com
+
 
 ### Branches
 
@@ -26,5 +51,7 @@ Example Site: http://polymer-event-test.meteor.com
 * Famous Wrapped - *This one works !?!?!*
 
 * No Polymer - Reference
+
+* Iron Router 
 
 
