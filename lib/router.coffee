@@ -4,6 +4,7 @@ Router.configure
   layoutTemplate: 'layout'
 
 
+
 #Router.map ->
 #  @route '/',
 #    name: 'hello'

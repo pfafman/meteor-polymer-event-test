@@ -1,10 +1,8 @@
 
 Template.hello.rendered = ->
+  console.log("hello rendered")
   Session.setDefault("templateEventCounter", 0)
   Session.setDefault("onclickCounter", 0)
-
-  console.log("hello.rendered button events before", $._data($('button').get(0), "events"))
-
   
   $('button').on 'click', (e) ->
     console.log("jquery click event")
@@ -14,8 +12,7 @@ Template.hello.rendered = ->
     console.log("jquery click event")
     Session.set("onclickCounter", Session.get("onclickCounter") + 1)
   
-  console.log("hello.rendered button events after", $._data($('button').get(0), "events"))
-
+  
 
 
 Template.hello.helpers
@@ -40,5 +37,5 @@ Template.hello.events
     console.log("test click")
   
 
-console.log("Template Hello events", Template.hello.__eventMaps)
+#console.log("Template Hello events", Template.hello.__eventMaps)
 #console.log("Template Hello  events", $._data($('button')?.get(0), "events"))
