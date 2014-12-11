@@ -49,9 +49,9 @@ Example Site: http://polymer-event-test.meteor.com
 
 * Package - Add polymer as a package
 
-* Inject Initial - Inject the polymer js so it loads before Meteor
+* Inject Initial - Inject the polymer script so it loads before Meteor
 
-* Famous Wrapped - *This one works !?!?!*
+* Famous Wrapped 
 
 * No Polymer - Reference
 
