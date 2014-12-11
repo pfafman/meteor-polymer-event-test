@@ -14,23 +14,26 @@ So if you do this
   {{> hello}}
 </body>
 ```
+
 and this 
+
 ```
 Template.hello.events
   # Will not fire if webcomponents.js is loaded
   'click button': ->
     console.log("template click event")
 ```
+
 The template events will not fire in non chrome browsers!  Events set up via jQuery will still fire.
 
 But if you change the template to this so the included template is in some block.
+
 ```
 <body>
   <div>
     {{> hello}}
   </div>
 </body>
-
 ```
 then they work.
 
