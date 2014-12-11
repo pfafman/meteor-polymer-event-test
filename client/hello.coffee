@@ -22,7 +22,7 @@ Template.hello.helpers
   onclickCounter: ->
     Session.get("onclickCounter")
 
-#console.log("Set up template hello", Template.hello.events)
+
 Template.hello.events
   # Will not fire if webcomponents.js is loaded
   'click button': (e, tmpl) ->
@@ -33,8 +33,11 @@ Template.hello.events
     console.log("template click event")
     Session.set("templateEventCounter", Session.get("templateEventCounter") + 1)
 
-  'click [data-test]': (e, tmpl) ->
-    console.log("test click")
+  'click #open-dialog': (e, tmpl) ->
+    console.log("Open Dialog")
+    #Blaze.render(Template.dialog, document.getElementById('attach'));
+    $("#test-dialog")[0].open()
+  
   
 
 #console.log("Template Hello events", Template.hello.__eventMaps)

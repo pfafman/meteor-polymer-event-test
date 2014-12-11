@@ -1,5 +1,10 @@
 
 <template name="hello">
+  
+  <div id="attach">
+    {{> dialog}}
+  </div>
+
   <div class="container" layout vertical center>
 
   <h2>Meteor Polymer Template Events</h2>
@@ -19,7 +24,7 @@
 
     <paper-button raised>raised button</paper-button>
 
-    <paper-button data-test raised>raised button</paper-button>
+    <paper-button id="open-dialog" raised>Open Dialog</paper-button>
     
   </div>
 </template>
