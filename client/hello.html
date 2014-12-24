@@ -7,13 +7,13 @@
 
   <div class="container" layout vertical center>
 
-  <h2>Meteor Polymer Template Events</h2>
+    <h2>Meteor Polymer Template Events</h2>
 
-  <h5>Head version</h5>
+    <h5>Head version</h5>
 
-  <p>
-    Template events stop firing in Safari and Firefox once the polymer webcomponents.js file is included.
-  </p>
+    <p>
+      Template events stop firing in Safari and Firefox once the polymer webcomponents.js file is included.
+    </p>
 
     <button>Click Me</button>
   
@@ -26,5 +26,15 @@
 
     <paper-button id="open-dialog" raised>Open Dialog</paper-button>
     
+    <paper-button id="test-hell" raised>
+      Test in Hello Template
+    </paper-button>
+
+    {{> testClick}}
+
+    {{> fullPageAtForm}}
+    
   </div>
+
+  
 </template>

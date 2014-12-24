@@ -8,4 +8,7 @@ autopublish
 insecure
 coffeescript
 iron:router
+click-test
+accounts-password
+pfafman:user-accounts-polymer
 

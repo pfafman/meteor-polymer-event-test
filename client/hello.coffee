@@ -37,6 +37,9 @@ Template.hello.events
     console.log("Open Dialog")
     #Blaze.render(Template.dialog, document.getElementById('attach'));
     $("#test-dialog")[0].open()
+
+  'click #test-hell': (e, tmpl) ->
+    console.log("hello test")
   
   
 
